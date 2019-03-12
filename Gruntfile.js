@@ -1,21 +1,33 @@
 module.exports = function (grunt) {
-  imagemin: {
-    dynamic: {
-      files: [{
-                        expand: true,
-                        cwd: 'images/',
-                        src: ['**/*.{png}'],
-                        dest: 'dist/'
-                                                                                               
-      }]
-              
-    }               
+  uglify: {
+    options: {
+      mangle: {
+                reserved: ['jQuery', 'Backbone']
+                        
+      }
+                  
+    },
+    my_target: {
+      files: {
+                'dest/output.min.js': ['src/input.js']
+                        
+      }
+                 
     }
-  ;
+      
+  }
+});
 
-      grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-                  grunt.registerTask('default', ['imagemin']);
+
+      grunt.loadNpmTasks('grunt-contrib-htmlmin');
+
+
+
+                  grunt.registerTask('default', ['htmllmin']);
+
+
+
 
 
                   };
