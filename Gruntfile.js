@@ -1,20 +1,22 @@
+
 module.exports = function (grunt) {
-  grunt.initConfig({
-    htmlmin:{
-      dev:{
+  htmlmin: {                                     // Task
+        dev: { 
         options: {                                 // Target options
                 removeComments: true,
                 collapseWhitespace: true
               },
-        files:{
-          'dist/index.html':'index.html'
+        files: {
+                  'dist/index.html': 'index.html',
+                                                           
         }
-      }
-    }             
-  });
+          }
+    }  });
 
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+      grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-      grunt.registerTask('default', ['htmlmin']);
+            grunt.registerTask('default', ['htmllmin']);
+
 
 };
+
