@@ -1,15 +1,12 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     htmlhint: {
-      html: {
-        options: {
-                    htmlhintrc: '.htmlhintrc'
-            
-        },
-          src: ['*.html']
+      options: {
+                htmlhintrc: '.htmlhintrc'
           
-      }
-                
+      },
+        src: ['*.html']
+        
     }
                 
   });
