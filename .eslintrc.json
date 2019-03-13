@@ -1,74 +1,39 @@
 {
-
   "env": {
-
-        "browser": true,
-
-            "jquery": true
-
-                
+            "browser": true,
+                    "jquery": true,
+                            "node": true
+                                  
   },
-
-    "extends": "eslint:recommended",
-
-    "rules": {
-
-      "indent": [
-
-              "error",
-
-            2,
-
-            {
-
-                      "SwitchCase": 1,
-
-                              "VariableDeclarator": {"var": 2, "let": 2, "const": 3}
-
-                            
-            }
-
-          
-        ],
-
-          "linebreak-style": [
-
-                  "error",
-
-                "unix"
-
-                      
-            ],
-
-            "quotes": [
-
-                    "error",
-
-                  "single"
-
-                        
-              ],
-
-              "semi": [
-
+      "extends": "eslint:recommended",
+      "rules": {
+        "indent": [
                       "error",
-
-                    "always"
-
-                          
+                    2,
+                    {
+                                    "SwitchCase": 1,
+                                                  "VariableDeclarator": {"var": 2, "let": 2, "const": 3}
+                                                
+                    }
+                
+          ],
+            "linebreak-style": [
+                          "error",
+                        "unix"
+                                  
+              ],
+              "quotes": [
+                            "error",
+                          "single"
+                                    
                 ],
-
-                "no-console": [
-
-                        "error",
-
-                      { "allow": ["error"]  }
-
-            
+                "semi": [
+                              "error",
+                            "always"
+                                      
                   ]
-
                       
-    }
-
+      }
 
 }
+     
