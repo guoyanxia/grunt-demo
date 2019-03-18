@@ -1,34 +1,20 @@
 module.exports = function (grunt) {
-  uglify: {
-    options: {
-      mangle: {
-                reserved: ['jQuery', 'Backbone']
-                        
-      }
+  grunt.initConfig({
+    uglify: {
+      release:{
+        files: {
+                    'js/jquery.min.js': 'js/jquery.js'
+            
+        }
+                     
+      }       
                   
-    },
-    my_target: {
-      files: {
-                'dest/output.min.js': ['src/input.js']
-                        
-      }
-                 
     }
-      
-  }
-});
+              
+  });
 
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
+      grunt.registerTask('default', ['uglify:release']);
 
-      grunt.loadNpmTasks('grunt-contrib-uglify');
-
-
-
-                  grunt.registerTask('default', ['uglify']);
-
-
-
-
-
-                  };
-
+};
